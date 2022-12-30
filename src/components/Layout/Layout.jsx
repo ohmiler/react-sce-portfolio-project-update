@@ -1,21 +1,22 @@
 import React from 'react'
-import MobileNav from '../MobileNav';
+import { Container, StyledContent } from './styles'
 import Sidebar from '../Sidebar'
-import UserHeader from '../UserHeader';
-
-import { StyledContent, Container } from './styles'
+import UserHeader from '../UserHeader'
+import MobileNav from '../MobileNav'
 
 function Layout({ user, children }) {
   return (
     <>
         <MobileNav />
         <Container>
-        <Sidebar />
+            <Sidebar />
             <StyledContent>
                 <UserHeader user={user} />
-                <div>{children}</div>   
+                <div>
+                    {children}
+                </div>
             </StyledContent>
-        </Container>
+        </Container>   
     </>
   )
 }

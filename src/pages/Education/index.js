@@ -1,2 +1,2 @@
 import Education from "./Education";
-export default Education
+export default Education;

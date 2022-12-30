@@ -1,2 +1,2 @@
 import UserHeader from './UserHeader'
-export default UserHeader;
+export default UserHeader

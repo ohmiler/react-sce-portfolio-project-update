@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Spacer, NavWrapper, MobileLink } from './styles'
-import { FaHouseUser, FaCode, FaBorderAll, FaBook } from "react-icons/fa";
+import { FaHouseUser, FaCode, FaBorderAll, FaBook } from 'react-icons/fa'
 
 function MobileNav() {
   return (

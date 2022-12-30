@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import { Container, EducationItem, Degree } from './styles'
 import { SectionTitle, Paragraph } from '../../styles'
-import { Container, EducationItem, Institution, Degree } from './styles'
 
 function Education({ user }) {
   return (
@@ -9,19 +9,13 @@ function Education({ user }) {
         <Container>
             <SectionTitle>Education</SectionTitle>
             <ul>
-                {user.education.map((education, i) => (
+                {user?.education?.map((education, i) => (
                     <EducationItem key={i}>
-                        <Institution>{education.position}</Institution>
-                        <div>
-                            <Degree>
-                                {education.studyType},
-                                {education.area}
-                            </Degree>
+                        <Degree>
+                            <p>{education.studyType}, {education.area}</p>
                             <span>&sdot;</span>
-                            <span>
-                                {education.start.year} to {education.end.year}
-                            </span>
-                        </div>
+                            <p>{education.start.year} to {education.end.year}</p>
+                        </Degree>
                         <Paragraph>{education.description}</Paragraph>
                     </EducationItem>
                 ))}
